@@ -1,0 +1,85 @@
+@import 'variables';
+@import 'mixins';
+
+@import 'nav';
+
+// Variables
+body{
+    background-color: $redColour;
+    @include clear;
+}
+
+.paragraph{
+    color: complement($redColour);
+    @include clear;
+}
+
+// // a:hover{
+// //     color: darken($redColour, 40%);
+// // }
+
+a{
+    &:hover{
+         color: darken($redColour, 40%);
+    }
+}
+
+
+.class1{
+    &.class2{
+        min-height: 10px;
+    }
+}
+
+
+
+// Nesting
+.card {
+    background-color: white;
+    border: 2px solid $redColour;
+
+    .cardBody{
+        color: $redColour;
+        text-align: right;
+
+        .cardTitle{
+            font-style: 2em;
+
+            img{
+                max-width: 50px;
+            }
+        }
+    }
+}
+
+// mixins
+
+// .div1{
+//     border: 10px solid black;
+//     float: left;
+//     text-align: center;
+//     color: red;
+// }
+//
+// .div2{
+//     border: 10px solid black;
+//     float: left;
+//     text-align: center;
+//     color: blue;
+// }
+
+@mixin divStyle {
+    border: 10px solid black;
+    float: right;
+    text-align: center;
+}
+
+.div1{
+    @include divStyle;
+    color: red;
+}
+
+.div2{
+    @include divStyle;
+    color: blue;
+}

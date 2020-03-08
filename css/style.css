@@ -1,0 +1,66 @@
+nav {
+  color: #c0392b;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  float: right;
+}
+
+body {
+  background-color: #c0392b;
+}
+body::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+
+.paragraph {
+  color: #2bb2c0;
+}
+.paragraph::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+
+a:hover {
+  color: #190806;
+}
+
+.class1.class2 {
+  min-height: 10px;
+}
+
+.card {
+  background-color: white;
+  border: 2px solid #c0392b;
+}
+.card .cardBody {
+  color: #c0392b;
+  text-align: right;
+}
+.card .cardBody .cardTitle {
+  font-style: 2em;
+}
+.card .cardBody .cardTitle img {
+  max-width: 50px;
+}
+
+.div1 {
+  border: 10px solid black;
+  float: right;
+  text-align: center;
+  color: red;
+}
+
+.div2 {
+  border: 10px solid black;
+  float: right;
+  text-align: center;
+  color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
