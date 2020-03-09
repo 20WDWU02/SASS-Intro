@@ -1,6 +1,8 @@
 @import 'variables';
 @import 'mixins';
 
+@import 'grid';
+
 @import 'nav';
 
 // Variables
@@ -68,11 +70,6 @@ a{
 //     color: blue;
 // }
 
-@mixin divStyle {
-    border: 10px solid black;
-    float: right;
-    text-align: center;
-}
 
 .div1{
     @include divStyle;

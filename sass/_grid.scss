@@ -1,0 +1,49 @@
+$columns: 12;
+$columnWidth: 100% / $columns;
+
+$Mwidth: 600px;
+$Lwidth: 1000px;
+
+@mixin column{
+    float: left;
+    padding: 10px;
+}
+
+@mixin clear {
+    &::after{
+        clear: both;
+        display: block;
+        content: '';
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.row{
+    @include clear;
+}
+
+@for $i from 1 through $columns{
+    .col#{$i}{
+        width: $columnWidth * $i;
+        @include column;
+    }
+}
+
+@media screen and (min-width: $Mwidth){
+    @for $i from 1 through $columns{
+        .colM#{$i}{
+            width: $columnWidth * $i;
+        }
+    }
+}
+
+@media screen and (min-width: $Lwidth){
+    @for $i from 1 through $columns{
+        .colL#{$i}{
+            width: $columnWidth * $i;
+        }
+    }
+}

@@ -1,7 +1,5 @@
-@mixin clear {
-    &::after{
-        clear: both;
-        display: block;
-        content: '';
-    }
+@mixin divStyle {
+    border: 10px solid black;
+    float: right;
+    text-align: center;
 }

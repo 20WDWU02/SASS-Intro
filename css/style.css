@@ -1,3 +1,184 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.row::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+
+.col1 {
+  width: 8.3333333333%;
+  float: left;
+  padding: 10px;
+}
+
+.col2 {
+  width: 16.6666666667%;
+  float: left;
+  padding: 10px;
+}
+
+.col3 {
+  width: 25%;
+  float: left;
+  padding: 10px;
+}
+
+.col4 {
+  width: 33.3333333333%;
+  float: left;
+  padding: 10px;
+}
+
+.col5 {
+  width: 41.6666666667%;
+  float: left;
+  padding: 10px;
+}
+
+.col6 {
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+
+.col7 {
+  width: 58.3333333333%;
+  float: left;
+  padding: 10px;
+}
+
+.col8 {
+  width: 66.6666666667%;
+  float: left;
+  padding: 10px;
+}
+
+.col9 {
+  width: 75%;
+  float: left;
+  padding: 10px;
+}
+
+.col10 {
+  width: 83.3333333333%;
+  float: left;
+  padding: 10px;
+}
+
+.col11 {
+  width: 91.6666666667%;
+  float: left;
+  padding: 10px;
+}
+
+.col12 {
+  width: 100%;
+  float: left;
+  padding: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .colM1 {
+    width: 8.3333333333%;
+  }
+
+  .colM2 {
+    width: 16.6666666667%;
+  }
+
+  .colM3 {
+    width: 25%;
+  }
+
+  .colM4 {
+    width: 33.3333333333%;
+  }
+
+  .colM5 {
+    width: 41.6666666667%;
+  }
+
+  .colM6 {
+    width: 50%;
+  }
+
+  .colM7 {
+    width: 58.3333333333%;
+  }
+
+  .colM8 {
+    width: 66.6666666667%;
+  }
+
+  .colM9 {
+    width: 75%;
+  }
+
+  .colM10 {
+    width: 83.3333333333%;
+  }
+
+  .colM11 {
+    width: 91.6666666667%;
+  }
+
+  .colM12 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .colL1 {
+    width: 8.3333333333%;
+  }
+
+  .colL2 {
+    width: 16.6666666667%;
+  }
+
+  .colL3 {
+    width: 25%;
+  }
+
+  .colL4 {
+    width: 33.3333333333%;
+  }
+
+  .colL5 {
+    width: 41.6666666667%;
+  }
+
+  .colL6 {
+    width: 50%;
+  }
+
+  .colL7 {
+    width: 58.3333333333%;
+  }
+
+  .colL8 {
+    width: 66.6666666667%;
+  }
+
+  .colL9 {
+    width: 75%;
+  }
+
+  .colL10 {
+    width: 83.3333333333%;
+  }
+
+  .colL11 {
+    width: 91.6666666667%;
+  }
+
+  .colL12 {
+    width: 100%;
+  }
+}
 nav {
   color: #c0392b;
 }
