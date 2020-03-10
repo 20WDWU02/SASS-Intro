@@ -25,3 +25,138 @@ Once you have changed those settings, you can drag over your project folder wher
 Rather than making .css files we will now be creating **.scss** files. This is the file extension for writing sass. Often these will be located in a **sass** folder in the root of our directory.  
 
 In this file, we can write normal CSS and if your output path is pointing to the right directory, whenever you save the file it should create/override the .css with your newly created code.
+
+## Variables
+Variables are a way to assign commonly used values to a name which you can use multiple times throughout your project. This is one of the most useful tools that come with sass.  
+To declare a variable you use the $ along with the variable name. You must declare the variable before you use it in your project.
+
+<table>
+<tr>
+<th>SASS / .scss</th>
+<th>Compiled into css</th>
+</tr>
+<tr>
+<td>
+  
+  ```scss
+  $mainColour: #e74c3c;
+
+  .error {
+    color: $mainColour;
+    border: 1px solid $mainColour;
+  };
+  ```
+  
+</td>
+<td>
+  
+  ```css
+  .error {
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+  };
+  ```
+  
+</td>
+</tr>
+</table>
+
+## Nesting
+Nesting is used to help create your descendent selectors for CSS. It allows you to easily group together the elements which you want to be descendants of each other.  
+It will very specific CSS which could be hard to maintain if you are not careful with writing your nests.
+
+<table>
+<tr>
+<th>SASS / .scss</th>
+<th>Compiled into css</th>
+</tr>
+<tr>
+<td>
+  
+  ```scss
+    nav {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      li { display: inline-block; }
+
+      a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+      }
+    }
+  ```
+  
+</td>
+<td>
+  
+  ```css
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    nav li {
+      display: inline-block;
+    }
+    nav a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+  ```
+  
+</td>
+</tr>
+</table>
+
+
+## Mixins
+Mixins are similar to variables but allow you to create a blocks of multiple css properties that you can reuse throughout your file. This will make it easier to give elements similar properties and allows you to edit them all at once rather than individually.
+
+<table>
+<tr>
+<th>SASS / .scss</th>
+<th>Compiled into css</th>
+</tr>
+<tr>
+<td>
+  
+  ```scss
+    @mixin borderStyle{
+      border: 5px solid black;
+      border-radius: 10%;
+    }
+    
+    .button{
+      @include borderStyle;
+    }
+    
+    .card{
+      @include borderStyle;
+    }
+
+  ```
+  
+</td>
+<td>
+  
+  ```css
+    .button{
+      border: 5px solid black;
+      border-radius: 10%;
+    }
+    
+    .card{
+      border: 5px solid black;
+      border-radius: 10%;
+    }
+  ```
+  
+</td>
+</tr>
+</table>
